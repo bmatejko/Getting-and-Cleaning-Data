@@ -81,13 +81,16 @@ How the data was prepared:
 1. Raw data were downloaded and unzip 
 2. Important tables were read into R
 3. In y_test and y_train file I changed category names to names from file activity_labels.txt
-I have also cut off the numbers that begin every label "1 WALKING"
+I have also cut off the numbers that begin every label for example "1 WALKING"
 4. Using data from features.txt i changed the names of columns in x_test and x_train files.
 5. I have also here cut off the numbers that begin every variable name
 6. Using Regular expresion and grep function i found variables which shows means() and std() and index this x_train and x_test data sets to have only this varriables
 7. I was not sure if i should use Inertial Signals data, so i wrote code as an option
    to download this data, label it and add to the final cleaned Data set
 8. I merged separately Test data set and Train data set (same column names)
-9. Using aggregate function i prepare secound clean data sets which shows the average of each variable for each activity and each subject.
+9. Using aggregate function i prepare secound clean data set which shows the average of each variable for each activity and each subject.
 10. Activity column and subject column were also rename
-11. I wrote final clean sets into hardrive in R directory
+11. I wrote final clean sets into hardrive in R directory as:
+12. CleanData.txt
+13. CleanedDataAve.txt
+12. 
