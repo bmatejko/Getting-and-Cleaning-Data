@@ -1,5 +1,5 @@
 Variable List in CleandedData file
-
+=========================================
 1. Subject Number:  1:30 [volunteers within an age bracket of 19-48 years] - An    identifier of the subject who carried out the experiment
 2. Activity:  1 WALKING
               2 WALKING_UPSTAIRS
@@ -8,7 +8,7 @@ Variable List in CleandedData file
               5 STANDING
               6 LAYING
   - It is just activity labels          
-3 to 66. are variables (vector with time and frequency domain variables) with following descriptisson:
+3. 3 to 66. are variables (vector with time and frequency domain variables) with following descriptisson:
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
 Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
