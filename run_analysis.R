@@ -30,9 +30,6 @@ x_test<-read.table("../Data/UCI HAR Dataset/test/X_test.txt",header=F)
 head(x_test)
 
 featureT<-read.table("../Data/UCI HAR Dataset/features.txt", sep=".", header=F)
-#featureT<-as.character(featureT$V1)
-#str(featureT)
-#featureT
 splitNames2<-strsplit(as.character(featureT$V1)," ")
 str(splitNames2)
 featureT<-sapply(splitNames2,secondEl)
@@ -49,6 +46,24 @@ Indx
 x_test<-cbind(x_test[,Indx1], x_test[,Indx2])
 
 TEST<-cbind(sub_test,y_test,x_test)
+
+
+#reading gyro and acc data (I was not sure if it is needed acording to the instructions)
+#body_gyro_x_test<-read.table("../Data/UCI HAR Dataset/test/Inertial Signals/body_gyro_x_test.txt", sep="", header=F, col.names=c(rep("body_gyro_x",128)))
+#body_gyro_y_test<-read.table("../Data/UCI HAR Dataset/test/Inertial Signals/body_gyro_y_test.txt", sep="", header=F, col.names=c(rep("body_gyro_y",128)))
+#body_gyro_z_test <-read.table("../Data/UCI HAR Dataset/test/Inertial Signals/body_gyro_z_test.txt", sep="", header=F, col.names=c(rep("body_gyro_z",128)))
+
+#body_acc_x_test <-read.table("../Data/UCI HAR Dataset/test/Inertial Signals/body_acc_x_test.txt", sep="", header=F, col.names=c(rep("body_acc_x",128)))
+#body_acc_y_test <-read.table("../Data/UCI HAR Dataset/test/Inertial Signals/body_acc_y_test.txt", sep="", header=F, col.names=c(rep("body_acc_y",128)))
+#body_acc_z_test <-read.table("../Data/UCI HAR Dataset/test/Inertial Signals/body_acc_z_test.txt", sep="", header=F, col.names=c(rep("body_acc_z",128)))
+
+#total_acc_x_test <-read.table("../Data/UCI HAR Dataset/test/Inertial Signals/total_acc_x_test.txt", sep="", header=F, col.names=c(rep("total_acc_x",128)))
+#total_acc_y_test<-read.table("../Data/UCI HAR Dataset/test/Inertial Signals/total_acc_y_test.txt", sep="", header=F, col.names=c(rep("total_acc_y",128)))
+#total_acc_z_test <-read.table("../Data/UCI HAR Dataset/test/Inertial Signals/total_acc_z_test.txt", sep="", header=F, col.names=c(rep("total_acc_z",128)))
+
+
+#TEST<-cbind(sub_test,y_test,body_gyro_x_test,body_gyro_y_test,body_gyro_z_test,body_acc_x_test,body_acc_y_test,body_acc_z_test,total_acc_x_test,total_acc_y_test,total_acc_z_test, x_test)
+
 
 ## train data
 
@@ -87,8 +102,22 @@ Indx
 #x_train with variables mean() and sd()
 x_train<-cbind(x_train[,Indx3], x_train[,Indx4])
 
-
 TRAIN<-cbind(sub_train,y_train, x_train)
+
+# As previuos I was not sure if this data are needed acording to the instructions)
+#body_gyro_x_train<-read.table("../Data/UCI HAR Dataset/train/Inertial Signals/body_gyro_x_train.txt", sep="", header=F, col.names=c(rep("body_gyro_x",128)))
+#body_gyro_y_train<-read.table("../Data/UCI HAR Dataset/train/Inertial Signals/body_gyro_y_train.txt", sep="", header=F, col.names=c(rep("body_gyro_y",128)))
+#body_gyro_z_train <-read.table("../Data/UCI HAR Dataset/train/Inertial Signals/body_gyro_z_train.txt", sep="", header=F, col.names=c(rep("body_gyro_z",128)))
+
+#body_acc_x_train <-read.table("../Data/UCI HAR Dataset/train/Inertial Signals/body_acc_x_train.txt", sep="", header=F, col.names=c(rep("body_acc_x",128)))
+#body_acc_y_train <-read.table("../Data/UCI HAR Dataset/train/Inertial Signals/body_acc_y_train.txt", sep="", header=F, col.names=c(rep("body_acc_y",128)))
+#body_acc_z_train <-read.table("../Data/UCI HAR Dataset/train/Inertial Signals/body_acc_z_train.txt", sep="", header=F, col.names=c(rep("body_acc_z",128)))
+
+#total_acc_x_train <-read.table("../Data/UCI HAR Dataset/train/Inertial Signals/total_acc_x_train.txt", sep="", header=F, col.names=c(rep("total_acc_x",128)))
+#total_acc_y_train<-read.table("../Data/UCI HAR Dataset/train/Inertial Signals/total_acc_y_train.txt", sep="", header=F, col.names=c(rep("total_acc_y",128)))
+#total_acc_z_train <-read.table("../Data/UCI HAR Dataset/train/Inertial Signals/total_acc_z_train.txt", sep="", header=F, col.names=c(rep("total_acc_z",128)))
+
+#TRAIN<-cbind(sub_train,y_train,body_gyro_x_train,body_gyro_y_train,body_gyro_z_train,body_acc_x_train,body_acc_y_train,body_acc_z_train,total_acc_x_train,total_acc_y_train,total_acc_z_train, x_train)
 
 
 # merge two cleaned data sets
