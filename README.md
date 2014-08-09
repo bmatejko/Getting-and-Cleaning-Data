@@ -1,10 +1,11 @@
-Getting-and-Cleaning-Data
+###Getting-and-Cleaning-Data
 ==================================================================
 Bartłomiej Matejko
 POLAND
 Jagiellonian University
 ==================================================================
-run_analysis.R file is a set of instruction in R which makes the raw data (data collected from the accelerometers from the 
+##run_analysis.R 
+file is a file with sets of instruction in R which makes the raw data (data collected from the accelerometers from the 
 Samsung Galaxy S smartphone) clean using following steps:
 
 *Merges the training and the test sets to create one data set.
@@ -16,6 +17,6 @@ Samsung Galaxy S smartphone) clean using following steps:
 
 ==================================================================
 
-Results
+##Results
 ==================================================================
 Two tidy data sets are generated
