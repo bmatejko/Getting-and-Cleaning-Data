@@ -3,6 +3,7 @@
 Bartłomiej Matejko
 POLAND
 Jagiellonian University
+
 ==================================================================
 ##run_analysis.R 
 file is a file with sets of instruction in R which makes the raw data (data collected from the accelerometers from the 
